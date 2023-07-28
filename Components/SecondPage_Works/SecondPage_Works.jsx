@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-scroll';
-import ScrollButton from "./ScrollButton";
+import ScrollButton from "./Components/ScrollButton";
 
 const SecondPage_Works = () => {
     
