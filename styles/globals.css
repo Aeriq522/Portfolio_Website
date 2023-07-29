@@ -27,3 +27,18 @@ body {
 }
 
 
+/* CSS for the swaying animation */
+.swaying {
+  animation: sway 2s infinite alternate;
+}
+
+@keyframes sway {
+  from {
+    transform: rotateZ(-5deg);
+    transform: translateX(-10px);
+  }
+  to {
+    transform: rotateZ(5deg);
+    transform: translateX(10px);
+  }
+}

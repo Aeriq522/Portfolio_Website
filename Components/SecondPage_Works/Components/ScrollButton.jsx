@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
-import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 const ScrollButton = () => {
   const [scrollDirection, setScrollDirection] = useState("down");
+
 
   const toggleScrollDirection = () => {
     setScrollDirection(scrollDirection === "down" ? "up" : "down");
@@ -22,18 +24,27 @@ const ScrollButton = () => {
 
   return (
     <div>
-      <ArrowCircleUpIcon
-        onClick={toggleScrollDirection}
+      {scrollDirection === "down" ? (
+        <ArrowCircleDownIcon
         className={classNames(
-          "fixed bottom-8 right-8 bg-blue-500 text-white py-3 px-6 rounded-lg shadow-lg",
+          "fixed bottom-8 right-8 bg-blue-900 text-white scale-150 rounded-lg",
           {
-            "bg-red-500": scrollDirection === "up",
+            "bg-red-900": scrollDirection === "up",
           }
         )}
-      >
-        {scrollDirection === "down" ? "Scroll Down" : "Scroll Up"}
-      </ArrowCircleUpIcon>
-      {/* Rest of your content */}
+          onClick={toggleScrollDirection}
+        />
+      ) : (
+        <ArrowCircleUpIcon
+          onClick={toggleScrollDirection}
+          className={classNames(
+            "fixed bottom-8 right-8 bg-blue-900 text-white scale-150 rounded-lg",
+            {
+              "bg-red-900": scrollDirection === "up",
+            }
+          )}
+        ></ArrowCircleUpIcon>
+      )}
     </div>
   );
 };
