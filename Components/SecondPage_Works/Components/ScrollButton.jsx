@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 
 const ScrollButton = () => {
   const [scrollDirection, setScrollDirection] = useState("down");
@@ -21,7 +22,7 @@ const ScrollButton = () => {
 
   return (
     <div>
-      <button
+      <ArrowCircleUpIcon
         onClick={toggleScrollDirection}
         className={classNames(
           "fixed bottom-8 right-8 bg-blue-500 text-white py-3 px-6 rounded-lg shadow-lg",
@@ -31,7 +32,7 @@ const ScrollButton = () => {
         )}
       >
         {scrollDirection === "down" ? "Scroll Down" : "Scroll Up"}
-      </button>
+      </ArrowCircleUpIcon>
       {/* Rest of your content */}
     </div>
   );
