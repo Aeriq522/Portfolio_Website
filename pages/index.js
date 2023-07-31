@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden bg-black">
       <TopMenuBar />
       <FirstPage_Welcome></FirstPage_Welcome>
       <SecondPage_Works></SecondPage_Works>

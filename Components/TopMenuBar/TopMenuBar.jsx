@@ -8,7 +8,7 @@ const TopMenuBar = () => {
 
   return (
     <div>
-      <div className="flex justify-between shadow-gray-800 shadow-lg absolute w-[100vw]">
+      <div className="flex justify-between shadow-gray-800 shadow-lg absolute w-[100vw] text-white">
         <div className="px-8 flex items-center justify-center">
           Logo
         </div>

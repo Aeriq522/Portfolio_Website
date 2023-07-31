@@ -58,7 +58,7 @@ const ScrollingBackground = () => {
   }, []);
 
   return (
-    <div className="py-8">
+    <div className="py-10">
       <div
         ref={containerRef}
         style={{
@@ -80,9 +80,9 @@ const ScrollingBackground = () => {
                 padding: "10px 20px",
                 margin: "0 10px",
                 borderRadius: "5px",
-                backgroundColor: "",
                 color: "white",
                 cursor: "pointer",
+                
               }}
             >
               {button.text}
