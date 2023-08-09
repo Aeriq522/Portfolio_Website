@@ -11,7 +11,7 @@ const SecondPage_Works = () => {
   return (
     <div className="border border-blue-700 h-[100vh] relative">
       <div
-        className={`h-48 w-48 border border-red-400 flex items-center pl-12 absolute right-1/4 top-24 ${
+        className={`h-48 w-48 border border-red-400 sm:border-blue-300 md:border-green-300 lg:border-yellow-300 flex items-center pl-12 absolute right-1/4 top-24 ${
           isAnimating ? "swaying" : " "
         }`}
         onMouseEnter={handleAnimationToggle}
@@ -23,7 +23,7 @@ const SecondPage_Works = () => {
         </div>
       </div>
       <div
-        className={`h-48 w-48 border border-red-400 flex items-center pl-12 absolute right-1/4 bottom-96 ${
+        className={`h-48 w-48 border  border-red-400 sm:border-blue-300 md:border-green-300 lg:border-yellow-300 flex items-center pl-12 absolute right-1/4 bottom-96 ${
           isAnimating ? "swaying" : " "
         }`}
         onMouseEnter={handleAnimationToggle}
@@ -35,7 +35,7 @@ const SecondPage_Works = () => {
         </div>
       </div>
       <div
-        className={`h-48 w-48 border border-red-400 flex items-center pl-12 absolute right-1/4 bottom-24 ${
+        className={`h-48 w-48 border  border-red-400 sm:border-blue-300 md:border-green-300 lg:border-yellow-300 flex items-center pl-12 absolute right-1/4 bottom-24 ${
           isAnimating ? "swaying" : " "
         }`}
         onMouseEnter={handleAnimationToggle}
