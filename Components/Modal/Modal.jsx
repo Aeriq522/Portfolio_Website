@@ -26,9 +26,10 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <>
       {/* Button to open the modal */}
-      <div className="px-8 flex items-center justify-center">
+      <div className="px-8 flex items-center justify-center z-10">
         <motion.div
           whileHover="hovered"
+          onClick={openModal}
           initial="default"
           variants={iconVariants}
           transition={{ duration: 0.25, ease: "easeInOut" }}
