@@ -24,7 +24,7 @@ const SecondPage_Works = () => {
   return (
     <div className="border border-blue-700 h-[100vh] flex justify-evenly place-items-center">
       <div
-        className={`h-48 w-48 border border-red-400 flex items-center pl-4 ${
+        className={`h-48 w-48 border border-red-400 sm:border-blue-300 md:border-green-300 lg:border-yellow-300 flex items-center pl-4 ${
           isAnimating ? "swaying" : " "
         }`}
         // onMouseEnter={handleAnimationToggle}
