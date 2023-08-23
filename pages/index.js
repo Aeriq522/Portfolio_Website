@@ -12,7 +12,7 @@ export default function Home() {
     <main className="overflow-hidden bg-black">
       <TopMenuBar />
       <FirstPage_Welcome></FirstPage_Welcome>
-      <SecondPage_Works></SecondPage_Works>
+      {/* <SecondPage_Works></SecondPage_Works> */}
       <ThirdPage_Test></ThirdPage_Test>
     </main>
   );

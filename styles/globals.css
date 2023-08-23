@@ -16,8 +16,6 @@
   }
 }
 
-
-
 /* CSS for the swaying animation */
 .swaying {
   animation: sway 2s infinite alternate;
@@ -35,7 +33,6 @@
 }
 
 /* CSS for the card spread effect */
-
 
 body:has(.card[data-color="blue"]:hover) {
   background-color: rgb(var(--blue-rgb) / 25%);
@@ -68,12 +65,25 @@ body:has(.card[data-color="brown"]:hover) {
   transition: scale 100ms;
 }
 
+/* }Initial Appearance of cards */
 .card .card-front-image {
   position: relative;
   z-index: 2;
 }
 
 .card .card-image {
+  width: clamp(300px, 20vw, 500px);
+  aspect-ratio: 2 / 3;
+  border-radius: clamp(0.5rem, 0.75vw, 2rem);
+}
+
+/* For when the card is clicked once and details come up */
+.card .card-front-image-clicked {
+  position: relative;
+  z-index: 10;
+}
+
+.card .card-image-clicked {
   width: clamp(300px, 20vw, 500px);
   aspect-ratio: 2 / 3;
   border-radius: clamp(0.5rem, 0.75vw, 2rem);
@@ -125,36 +135,36 @@ body:has(.card[data-color="brown"]:hover) {
   animation-delay: 2250ms;
 }
 
-@media(max-width: 1200px) {
-  body {    
+@media (max-width: 1200px) {
+  body {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  
+
   #cards {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     gap: 4rem;
     padding: 4rem;
   }
-  
+
   .card .card-image {
-    width: 400px;    
+    width: 400px;
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   #cards {
     gap: 2rem;
     padding: 2rem;
   }
-  
+
   .card {
-    width: 80%;    
+    width: 80%;
   }
-  
+
   .card .card-image {
-    width: 100%;    
+    width: 100%;
   }
 }
 
@@ -164,7 +174,7 @@ body:has(.card[data-color="brown"]:hover) {
     translate: 0%;
     opacity: 1;
   }
-  
+
   to {
     scale: 0.8;
     translate: -30%;
@@ -178,7 +188,7 @@ body:has(.card[data-color="brown"]:hover) {
     translate: 0%;
     opacity: 1;
   }
-  
+
   to {
     scale: 0.8;
     translate: 30%;
